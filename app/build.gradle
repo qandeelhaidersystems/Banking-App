@@ -1,0 +1,112 @@
+apply plugin: BuildPlugins.ANDROID_APPLICATION
+apply plugin: BuildPlugins.KOTLIN_ANDROID
+apply plugin: BuildPlugins.KOTLIN_KAPT
+apply plugin: BuildPlugins.DAGGER_HILT
+
+android {
+
+    compileSdkVersion BuildAndroidConfig.COMPILE_SDK_VERSION
+
+    defaultConfig {
+        applicationId BuildAndroidConfig.APPLICATION_ID
+        minSdkVersion BuildAndroidConfig.MIN_SDK_VERSION
+        targetSdkVersion BuildAndroidConfig.TARGET_SDK_VERSION
+        versionCode BuildAndroidConfig.VERSION_CODE
+        versionName BuildAndroidConfig.VERSION_NAME
+        multiDexEnabled BuildAndroidConfig.MULTI_DEX_ENABLED
+        testInstrumentationRunner BuildAndroidConfig.TEST_INSTRUMENTATION_RUNNER
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        dataBinding true
+        viewBinding true
+        compose true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation Dependencies.KOTLIN_VERSION
+    implementation Dependencies.KTX
+    implementation Dependencies.APP_COMBAT
+    implementation Dependencies.MATERIALIZE_DESIGN
+    implementation Dependencies.RECYCLER_VIEW
+    implementation Dependencies.CONSTRAINT_LAYOUT
+    testImplementation Dependencies.JUNIT
+    androidTestImplementation Dependencies.JUNIT_TEST
+    androidTestImplementation Dependencies.ESPRESSO
+
+    testImplementation('com.google.truth:truth:1.0.1')
+    androidTestImplementation('com.google.truth:truth:1.0.1')
+
+    // Hilt
+    implementation Dependencies.HILT_VIEW_MODEL
+    implementation Dependencies.HILT_WORK
+    implementation Dependencies.HILT_DAGGER
+    kapt Dependencies.HILT_DAGGER_COMPILER
+
+    implementation "androidx.fragment:fragment-ktx:1.4.0"
+
+    // Retrofit
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.RETROFIT_CONVERTER
+
+    // room library
+    implementation Dependencies.ROOM_RUNTIME
+    kapt Dependencies.ROOM_COMPILER
+    implementation Dependencies.ROOM_RX_JAVA_3
+    implementation Dependencies.ROOM_KTX
+
+    // coroutine
+    implementation(Dependencies.COROUTINE_ANDROID)
+    implementation(Dependencies.COROUTINE_CORE)
+
+    // swipe refresh
+    implementation(Dependencies.SWIPE_REFRESH_LAYOUT)
+
+    // Glide
+    implementation Dependencies.GLIDE
+    annotationProcessor Dependencies.GLIDE_COMPILER
+
+    // navigation kotlin
+    implementation Dependencies.NAVIGATION_FRAGMENT
+    implementation Dependencies.NAVIGATION_UI
+
+
+    // jetpack compose
+
+    implementation(Dependencies.COMPOSE_UI)
+    // Tooling support (Previews, etc.)
+    implementation(Dependencies.COMPOSE_UI_TOOLING)
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation(Dependencies.COMPOSE_FOUNDATION)
+    // Material Design
+    implementation(Dependencies.COMPOSE_MATERIAL)
+    // Material design icons
+    implementation(Dependencies.COMPOSE_MATERIAL_ICONS)
+    implementation(Dependencies.COMPOSE_MATERIAL_ICONS_EXTENDED)
+    // Integration with observables
+    implementation(Dependencies.COMPOSE_LIVE_DATA)
+    implementation(Dependencies.COMPOSE_RX_JAVA_2)
+    implementation(Dependencies.COMPOSE_ACTIVITY)
+    // UI Tests
+    androidTestImplementation(Dependencies.COMPOSE_JUNIT)
+    // constraint layout
+    implementation(Dependencies.COMPOSE_CONSTRAINT_LAYOUT)
+}
