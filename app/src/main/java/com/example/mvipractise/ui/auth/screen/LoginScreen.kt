@@ -1,4 +1,4 @@
-package com.example.mvipractise.ui.home.screen
+package com.example.mvipractise.ui.auth.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

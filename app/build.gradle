@@ -2,6 +2,7 @@ apply plugin: BuildPlugins.ANDROID_APPLICATION
 apply plugin: BuildPlugins.KOTLIN_ANDROID
 apply plugin: BuildPlugins.KOTLIN_KAPT
 apply plugin: BuildPlugins.DAGGER_HILT
+apply plugin: BuildPlugins.KOTLIN_PARCELIZE
 
 android {
 
