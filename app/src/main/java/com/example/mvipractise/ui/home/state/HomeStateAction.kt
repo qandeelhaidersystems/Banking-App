@@ -4,4 +4,6 @@ sealed class HomeStateAction {
 
     object GetHomeList : HomeStateAction()
 
+    object GetNotes : HomeStateAction()
+
 }
