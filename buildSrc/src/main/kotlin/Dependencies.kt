@@ -37,8 +37,8 @@ object Dependencies {
 
     const val MULTIDEX = "com.android.support:multidex:${BuildDependenciesVersions.multiDex}"
 
-    const val ROOM_RUNTIME = "androidx.room:room-runtime:${BuildDependenciesVersions.roomVersion}"
-    const val ROOM_COMPILER = "androidx.room:room-compiler:${BuildDependenciesVersions.roomVersion}"
+    const val ROOM_RUNTIME = "androidx.room:room-runtime:2.4.2"
+    const val ROOM_COMPILER = "androidx.room:room-compiler:2.4.2"
     const val ROOM_RX_JAVA_3 = "androidx.room:room-rxjava3:${BuildDependenciesVersions.roomVersion}"
     const val ROOM_KTX = "androidx.room:room-ktx:${BuildDependenciesVersions.roomVersion}"
 
@@ -66,4 +66,7 @@ object Dependencies {
     const val COMPOSE_ACTIVITY =   "androidx.activity:activity-compose:${BuildDependenciesVersions.composeActivity}"
     const val COMPOSE_CONSTRAINT_LAYOUT =   "androidx.constraintlayout:constraintlayout-compose:${BuildDependenciesVersions.composeConstraintLayout}"
 
+    //splash screen
+
+    const val SPLASH_SCREEN = "androidx.core:core-splashscreen:${BuildDependenciesVersions.splashScreen}"
 }

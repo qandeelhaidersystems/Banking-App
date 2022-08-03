@@ -45,6 +45,7 @@ object BuildDependenciesVersions {
     const val composeUi = "1.0.5"
     const val composeActivity = "1.4.0"
     const val composeConstraintLayout = "1.0.0-rc02"
+    const val splashScreen = "1.0.0-alpha02"
 
 
 }
