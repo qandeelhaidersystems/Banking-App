@@ -110,4 +110,7 @@ dependencies {
     androidTestImplementation(Dependencies.COMPOSE_JUNIT)
     // constraint layout
     implementation(Dependencies.COMPOSE_CONSTRAINT_LAYOUT)
+
+    //splash screen
+    implementation(Dependencies.SPLASH_SCREEN)
 }

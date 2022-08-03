@@ -108,10 +108,7 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
                         Log.i("TAGGGGGG 1", list.toString())
                         LinearList(list = list, modifier = Modifier)
                     }
-
                 }
-
-
             }
 
             is DataState.Error -> {
