@@ -29,6 +29,7 @@ fun CircularProgressBar(isShow: Boolean){
                 modifier = Modifier
                     .width(20.dp)
                     .height(20.dp)
+                    .weight(1F, false)
             )
         }
     }

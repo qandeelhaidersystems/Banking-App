@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Theme.app.starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#123345</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
         <item name="postSplashScreenTheme">@style/Theme.MviPractise</item>
     </style>

@@ -43,8 +43,8 @@ android {
 
 dependencies {
 
-    implementation Dependencies.KOTLIN_VERSION
-    implementation Dependencies.KTX
+//    implementation Dependencies.KOTLIN_VERSION
+//    implementation Dependencies.KTX
     implementation Dependencies.APP_COMBAT
     implementation Dependencies.MATERIALIZE_DESIGN
     implementation Dependencies.RECYCLER_VIEW
@@ -61,6 +61,7 @@ dependencies {
     implementation Dependencies.HILT_WORK
     implementation Dependencies.HILT_DAGGER
     kapt Dependencies.HILT_DAGGER_COMPILER
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
 
     implementation "androidx.fragment:fragment-ktx:1.4.0"
 
@@ -106,6 +107,11 @@ dependencies {
     implementation(Dependencies.COMPOSE_LIVE_DATA)
     implementation(Dependencies.COMPOSE_RX_JAVA_2)
     implementation(Dependencies.COMPOSE_ACTIVITY)
+
+    // Navigation Compose
+    implementation("androidx.navigation:navigation-compose:2.5.0")
+
+
     // UI Tests
     androidTestImplementation(Dependencies.COMPOSE_JUNIT)
     // constraint layout
@@ -113,4 +119,7 @@ dependencies {
 
     //splash screen
     implementation(Dependencies.SPLASH_SCREEN)
+
+    // DataStore Preferences
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 }
