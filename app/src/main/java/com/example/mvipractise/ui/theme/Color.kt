@@ -8,8 +8,10 @@ object Colors{
     val Purple700 = Color(0xFF3700B3)
     val Teal200 = Color(0xFF03DAC5)
 
-    val base = Color(0xFF876445)
+    val base = Color(0xFF314BCE)
     val baseLight = Color(0xFFC7B198)
     val baseBackground = Color(0xFFF0ECE3)
 
+
+    val textBaseColor = Color(0xFF151940)
 }

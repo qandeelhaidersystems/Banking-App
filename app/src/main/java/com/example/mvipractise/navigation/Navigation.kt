@@ -6,9 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.mvipractise.R
 import com.example.mvipractise.ui.auth.login.ShowLoginScreen
-import com.example.mvipractise.ui.auth.screen.LoginScreen
 import com.example.mvipractise.ui.home.screen.HomeScreen
 
 @Composable

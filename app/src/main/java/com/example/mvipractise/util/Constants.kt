@@ -11,5 +11,10 @@ class Constants {
         const val DEVICE_TYPE = "device_type"
         const val ANDROID = "android"
 
+        const val ON_BOARDING_SCREEN_1 = "onBoardingScreen1"
+        const val ON_BOARDING_SCREEN_2 = "onBoardingScreen2"
+        const val ON_BOARDING_SCREEN_3 = "onBoardingScreen3"
+        const val WELCOME_SCREEN = "welcomeScreen"
+
     }
 }

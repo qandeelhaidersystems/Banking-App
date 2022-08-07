@@ -1,4 +1,4 @@
-package com.example.mvipractise.ui
+package com.example.mvipractise.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
