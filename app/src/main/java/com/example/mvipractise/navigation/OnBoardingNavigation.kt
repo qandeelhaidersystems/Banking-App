@@ -16,6 +16,7 @@ import com.example.mvipractise.ui.home.screen.HomeScreen
 import com.example.mvipractise.ui.onBoarding.OnBoardingPage
 import com.example.mvipractise.ui.onBoarding.screens.OnBoardingScreen
 import com.example.mvipractise.ui.onBoarding.screens.WelcomeScreen
+import com.example.mvipractise.util.Constants
 
 @Composable
 fun OnBoardingNavigation() {
@@ -37,7 +38,12 @@ fun OnBoardingNavigation() {
                     OnBoardingScreen(
                         onBoardingPage = OnBoardingPage.First
                     ){
-                        navController.navigate(Screen.OnBoardingScreen2.route)
+                        if (it == Constants.SKIP) {
+                            navController.navigate(Screen.WelcomeScreen.route)
+                        }
+                        if (it == Constants.NEXT) {
+                            navController.navigate(Screen.OnBoardingScreen2.route)
+                        }
                     }
                 }
 
@@ -45,7 +51,12 @@ fun OnBoardingNavigation() {
                     OnBoardingScreen(
                         onBoardingPage = OnBoardingPage.Second
                     ){
-                        navController.navigate(Screen.OnBoardingScreen3.route)
+                        if (it == Constants.SKIP) {
+                            navController.navigate(Screen.WelcomeScreen.route)
+                        }
+                        if (it == Constants.NEXT) {
+                            navController.navigate(Screen.OnBoardingScreen3.route)
+                        }
                     }
                 }
 

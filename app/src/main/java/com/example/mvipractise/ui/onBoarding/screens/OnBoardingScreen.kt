@@ -2,6 +2,7 @@ package com.example.mvipractise.ui.onBoarding.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Button
@@ -21,11 +22,12 @@ import androidx.compose.ui.unit.sp
 import com.example.mvipractise.ui.onBoarding.OnBoardingPage
 import com.example.mvipractise.ui.theme.Colors
 import com.example.mvipractise.ui.theme.fontFamily
+import com.example.mvipractise.util.Constants
 
 @Composable
 fun OnBoardingScreen(
     onBoardingPage: OnBoardingPage = OnBoardingPage.First,
-    callback: () -> Unit
+    callback: (String) -> Unit
 ) {
 
     Column(
@@ -38,9 +40,13 @@ fun OnBoardingScreen(
     ) {
         Text(
             color = Colors.textBaseColor,
-            text = "SKIP",
+            text = Constants.SKIP.uppercase(),
             modifier = Modifier
-                .fillMaxWidth()
+                .width(60.dp)
+                .clickable {
+                    callback.invoke(Constants.SKIP)
+                }
+                .align(Alignment.End)
                 .padding(top = 60.dp),
             textAlign = TextAlign.End,
         )
@@ -119,7 +125,7 @@ fun OnBoardingScreen(
                             .clip(CircleShape),
 
                         onClick = {
-                            callback.invoke()
+                            callback.invoke(Constants.NEXT)
                         }) {
 
                         Text(text = "Next")
