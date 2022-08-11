@@ -19,7 +19,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.mvipractise.ui.onBoarding.OnBoardingPage
+import com.example.mvipractise.ui.onBoarding.util.OnBoardingPage
 import com.example.mvipractise.ui.theme.Colors
 import com.example.mvipractise.ui.theme.fontFamily
 import com.example.mvipractise.util.Constants

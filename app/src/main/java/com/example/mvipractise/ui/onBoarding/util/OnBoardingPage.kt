@@ -1,7 +1,6 @@
-package com.example.mvipractise.ui.onBoarding
+package com.example.mvipractise.ui.onBoarding.util
 
 import androidx.annotation.DrawableRes
-import androidx.compose.material.FabPosition
 import com.example.mvipractise.R
 
 sealed class OnBoardingPage(

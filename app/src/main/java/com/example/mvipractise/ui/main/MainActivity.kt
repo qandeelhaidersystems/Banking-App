@@ -1,10 +1,9 @@
 package com.example.mvipractise.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mvipractise.navigation.OnBoardingNavigation
 import com.example.mvipractise.ui.theme.ComposePractiseTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -16,18 +15,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        installSplashScreen().apply {
-            setOnExitAnimationListener { viewProvider ->
-                viewProvider.iconView
-                    .animate()
-                    .setDuration(2000L)
-                    .alpha(0f)
-                    .withEndAction {
-                        viewProvider.remove()
-                    }
-                    .start()
-            }
-        }
+//        installSplashScreen().apply {
+//            setOnExitAnimationListener { viewProvider ->
+//                viewProvider.iconView
+//                    .animate()
+//                    .setDuration(2000L)
+//                    .alpha(0f)
+//                    .withEndAction {
+//                        viewProvider.remove()
+//                    }
+//                    .start()
+//            }
+//        }
 
         super.onCreate(savedInstanceState)
 
