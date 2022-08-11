@@ -1,6 +1,6 @@
 
 object BuildAndroidConfig {
-    const val APPLICATION_ID = "ecommerce.mgasha.cart"
+    const val APPLICATION_ID = "com.example.mvipractise"
 
     const val COMPILE_SDK_VERSION = 32
     const val MIN_SDK_VERSION = 21
