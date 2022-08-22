@@ -1,9 +1,0 @@
-   public void getFirebaseInstanceId(SessionManager sessionManager){
-        FirebaseInstallations.getInstance().getId()
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        sessionManager.setInstanceID(task.getResult());
-                    }
-                });
-
-    }
