@@ -1,6 +1,7 @@
 package com.example.mvipractise.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -15,19 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-//        installSplashScreen().apply {
-//            setOnExitAnimationListener { viewProvider ->
-//                viewProvider.iconView
-//                    .animate()
-//                    .setDuration(2000L)
-//                    .alpha(0f)
-//                    .withEndAction {
-//                        viewProvider.remove()
-//                    }
-//                    .start()
-//            }
-//        }
-
         super.onCreate(savedInstanceState)
 
         setContent {
@@ -35,9 +23,5 @@ class MainActivity : AppCompatActivity() {
                 OnBoardingNavigation()
             }
         }
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
     }
 }

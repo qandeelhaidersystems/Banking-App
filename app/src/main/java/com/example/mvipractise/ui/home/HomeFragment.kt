@@ -34,7 +34,6 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
         return viewModel
     }
 
-    @ExperimentalFoundationApi
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -63,7 +62,7 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
 
                         viewModel.setIntent(HomeStateAction.GetNotes)
 
-                        DisplayData()
+//                        DisplayData()
 
                         viewModel.viewEffect.observe(viewLifecycleOwner) {
                             moveToNextScreen(it)
@@ -114,6 +113,10 @@ class HomeFragment : BaseFragment<HomeViewModel>() {
             is DataState.Error -> {
                 Log.i("TAGGGGGG", (state as DataState.Error<HomeViewState>).isErrorMessage().toString())
                 viewModel.isButtonClicked.value = false
+            }
+
+            else -> {
+
             }
 
         }

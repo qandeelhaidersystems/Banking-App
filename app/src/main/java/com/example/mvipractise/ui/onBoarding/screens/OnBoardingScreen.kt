@@ -30,8 +30,10 @@ fun OnBoardingScreen(
     callback: (String) -> Unit
 ) {
 
+    val modifier = Modifier
+    
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.White)
             .padding(start = 40.dp, end = 40.dp),
@@ -41,7 +43,7 @@ fun OnBoardingScreen(
         Text(
             color = Colors.textBaseColor,
             text = Constants.SKIP.uppercase(),
-            modifier = Modifier
+            modifier = modifier
                 .width(60.dp)
                 .clickable {
                     callback.invoke(Constants.SKIP)
@@ -54,7 +56,7 @@ fun OnBoardingScreen(
         Image(
             painter = painterResource(id = onBoardingPage.image),
             contentDescription = onBoardingPage.title,
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxHeight(0.4f)
                 .size(230.dp)
         )
@@ -66,7 +68,7 @@ fun OnBoardingScreen(
             fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxWidth()
                 .padding(bottom = 30.dp)
         )
@@ -79,13 +81,13 @@ fun OnBoardingScreen(
             fontWeight = FontWeight.Light,
             fontStyle = FontStyle.Normal,
             textAlign = TextAlign.Center,
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxWidth()
                 .padding(top = 0.dp, bottom = 0.dp)
         )
 
         Box(
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxSize()
                 .padding(bottom = 30.dp),
             Alignment.BottomStart
@@ -93,7 +95,7 @@ fun OnBoardingScreen(
             Row {
 
                 Column(
-                    modifier = Modifier
+                    modifier = modifier
                         .weight(1f)
                         .align(Alignment.CenterVertically),
                     verticalArrangement = Arrangement.Bottom,
@@ -113,13 +115,13 @@ fun OnBoardingScreen(
                 }
 
                 Column(
-                    modifier = Modifier.weight(1f),
+                    modifier = modifier.weight(1f),
                     horizontalAlignment = Alignment.End
 
                 ) {
                     Button(
 
-                        modifier = Modifier
+                        modifier = modifier
                             .padding(2.dp)
                             .size(70.dp)
                             .clip(CircleShape),

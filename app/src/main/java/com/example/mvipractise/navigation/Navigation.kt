@@ -32,14 +32,8 @@ fun OnBoardingNavigation() {
         ) {
             NavHost(
                 navController = navController,
-                startDestination = Screen.splashScreen.route
+                startDestination = Screen.OnBoardingScreen1.route
             ) {
-
-                composable(Screen.splashScreen.route) {
-                    SplashScreen{
-                        navController.navigate(Screen.OnBoardingScreen1.route)
-                    }
-                }
 
                 composable(Screen.OnBoardingScreen1.route) {
                     OnBoardingScreen(
@@ -71,7 +65,9 @@ fun OnBoardingNavigation() {
                     OnBoardingScreen(
                         onBoardingPage = OnBoardingPage.Third
                     ){
-                        navController.navigate(Screen.WelcomeScreen.route)
+                        navController.navigate(Screen.WelcomeScreen.route){
+                            popUpTo(0)
+                        }
                     }
                 }
 
