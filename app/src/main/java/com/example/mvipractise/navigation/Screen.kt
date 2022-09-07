@@ -10,6 +10,12 @@ sealed class Screen(val route: String){
     object OnBoardingScreen3: Screen(route = Constants.ON_BOARDING_SCREEN_3)
     object WelcomeScreen: Screen(route = Constants.WELCOME_SCREEN)
 
+    //Auth
+
+    object SignUpScreen: Screen(route = Constants.SIGN_UP_SCREEN)
+
+
+
     fun withArgs(vararg args: String): String{
 
         return buildString {

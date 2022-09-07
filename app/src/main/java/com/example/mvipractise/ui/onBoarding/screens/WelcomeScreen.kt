@@ -1,5 +1,6 @@
 package com.example.mvipractise.ui.onBoarding.screens
 
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -22,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.mvipractise.R
 import com.example.mvipractise.navigation.Screen
+import com.example.mvipractise.ui.auth.AuthActivity
 import com.example.mvipractise.ui.theme.Colors
 import com.example.mvipractise.ui.theme.fontFamily
 
@@ -90,7 +92,11 @@ fun WelcomeScreen(navController: NavController? = null) {
                 ),
 
                 onClick = {
-                    navController?.navigate(Screen.LoginScreen.route)
+
+                    val intent = Intent(navController?.context, AuthActivity::class.java)
+                    navController?.context?.startActivity(intent)
+
+//                    navController?.navigate(Screen.LoginScreen.route)
                 }) {
 
                 Image(

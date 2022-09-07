@@ -17,6 +17,9 @@ class Constants {
         const val ON_BOARDING_SCREEN_3 = "onBoardingScreen3"
         const val WELCOME_SCREEN = "welcomeScreen"
 
+
+        const val SIGN_UP_SCREEN = "signUpScreen"
+
         const val SKIP = "skip"
         const val NEXT = "next"
 

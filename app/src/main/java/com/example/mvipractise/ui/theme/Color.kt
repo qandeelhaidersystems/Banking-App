@@ -16,4 +16,7 @@ object Colors{
     val textBaseColor = Color(0xFF151940)
     val lightOrange = Color(0xFFFF897E)
     val white = Color(0xFFFFFFFF)
+    val lightGray = Color(0xFFF5F6FA)
+
+    val lightBlueBackground = Color(0xFF7F8192)
 }
