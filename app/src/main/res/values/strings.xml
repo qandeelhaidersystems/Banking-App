@@ -5,10 +5,13 @@
     <string name="google">GOOGLE</string>
     <string name="facebook">FACEBOOK</string>
     <string name="or">or</string>
-    <string name="first_name">First Name</string>
+    <string name="full_name">Full Name</string>
     <string name="enter_email_address">Enter Email Address</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="read_terms_of_privacy_policy">I’ve read and agree to the terms of privacy policy</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">login</string>
+    <string name="login_cap">LOGIN</string>
 
 </resources>

@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
@@ -34,7 +35,7 @@ fun GoogleAndFacebook(
             onClick = {}
         ) {
 
-            BaseTextComponent(modifier = modifier, text = context.getString(R.string.google))
+            BaseTextComponent(modifier = modifier.padding(10.dp), text = context.getString(R.string.google))
 
         }
 
@@ -45,7 +46,7 @@ fun GoogleAndFacebook(
             onClick = {}
         ) {
 
-            BaseTextComponent(modifier = modifier, text = context.getString(R.string.facebook))
+            BaseTextComponent(modifier = modifier.padding(10.dp), text = context.getString(R.string.facebook))
 
         }
 

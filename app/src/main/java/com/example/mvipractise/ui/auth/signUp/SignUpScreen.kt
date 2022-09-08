@@ -2,27 +2,22 @@ package com.example.mvipractise.ui.auth.signUp
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Card
 import androidx.compose.material.Checkbox
 import androidx.compose.material.CheckboxDefaults
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mvipractise.R
 import com.example.mvipractise.ui.theme.Colors
-import com.example.mvipractise.ui.theme.fontFamily
 import com.example.mvipractise.util.component.*
 
 @Composable
-@Preview
+@Preview(showSystemUi = true)
 fun SignUpScreen(
     viewModel: SignUpViewModel = hiltViewModel()
 ) {
@@ -34,7 +29,14 @@ fun SignUpScreen(
         modifier = modifier.padding(start = 30.dp, end = 30.dp)
     ) {
 
-        TitleTextComponent(modifier = modifier, text = context.getString(R.string.register))
+        TitleTextComponent(
+            modifier =
+            modifier
+                .padding(top = 50.dp)
+                .fillMaxWidth(),
+
+            text = context.getString(R.string.register)
+        )
 
         Spacer(modifier = modifier.padding(top = 40.dp))
 
@@ -50,8 +52,10 @@ fun SignUpScreen(
 
         EditTextComponent(
             modifier,
-            hint = context.getString(R.string.first_name),
+            hint = context.getString(R.string.full_name),
             getValue = viewModel.firstName.value,
+            keyboardType = KeyboardType.Text
+
         ) {
             viewModel.firstName.value = it
         }
@@ -62,13 +66,14 @@ fun SignUpScreen(
             modifier,
             hint = context.getString(R.string.enter_email_address),
             getValue = viewModel.email.value,
+            keyboardType = KeyboardType.Email
         ) {
             viewModel.email.value = it
         }
 
         Spacer(modifier = modifier.padding(top = 10.dp))
 
-        EditTextComponent(
+        PasswordEditText(
             modifier,
             hint = context.getString(R.string.password),
             getValue = viewModel.password.value,
@@ -78,7 +83,7 @@ fun SignUpScreen(
 
         Spacer(modifier = modifier.padding(top = 10.dp))
 
-        EditTextComponent(
+        PasswordEditText(
             modifier,
             hint = context.getString(R.string.confirm_password),
             getValue = viewModel.confirmPassword.value,
@@ -88,9 +93,7 @@ fun SignUpScreen(
 
         Spacer(modifier = modifier.padding(top = 10.dp))
 
-
         Row {
-
 
             Checkbox(
                 checked = viewModel.isTermsOfPrivacyPolicy.value,
@@ -109,20 +112,43 @@ fun SignUpScreen(
                 )
             )
 
-            Text(
+            BaseTextComponent(
                 text = context.getString(R.string.read_terms_of_privacy_policy),
-                color = Colors.textBaseColor,
-                fontSize = 14.sp,
-                fontFamily = fontFamily,
-                fontWeight = FontWeight.Light,
-                textAlign = TextAlign.Center,
-                modifier = modifier.padding(start = 10.dp, top = 5.dp)
+                modifier = modifier.padding(start = 10.dp)
             )
 
         }
 
-        Spacer(modifier = modifier.padding(top = 10.dp))
+        Spacer(modifier = modifier.padding(top = 60.dp))
 
+        BaseButton(
+            modifier = modifier.fillMaxWidth(),
+            text = context.getString(R.string.register),
+            enable = viewModel.isRegisterButtonEnabled.value
+        )
+
+
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(bottom = 30.dp),
+            Alignment.BottomStart
+        ) {
+            Column {
+                BaseTextComponent(
+                    modifier = modifier,
+                    text = context.getString(R.string.already_have_an_account)
+                )
+
+                Spacer(modifier = modifier.padding(top = 5.dp))
+
+                BaseTextComponent(
+                    modifier = modifier,
+                    text = context.getString(R.string.login_cap)
+                )
+            }
+
+        }
     }
 
 }

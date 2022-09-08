@@ -15,5 +15,6 @@ class SignUpViewModel @Inject constructor() : ViewModel(){
     val confirmPassword = mutableStateOf("")
 
     val isTermsOfPrivacyPolicy = mutableStateOf(false)
+    val isRegisterButtonEnabled = mutableStateOf(false)
 
 }

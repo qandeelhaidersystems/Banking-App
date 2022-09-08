@@ -29,7 +29,7 @@ fun OrDashesComponent(
                 .background(Colors.lightGray, RoundedCornerShape(2.dp))
         )
 
-        BaseTextComponent(modifier = modifier, text = text)
+        BaseTextComponent(modifier = modifier.padding(10.dp), text = text)
 
         Spacer(
             modifier = modifier
