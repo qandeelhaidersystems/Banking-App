@@ -32,7 +32,9 @@ fun GoogleAndFacebook(
             colors = ButtonDefaults.buttonColors(backgroundColor = Colors.lightGray),
             shape = RoundedCornerShape(5.dp),
             modifier = modifier.weight(1f),
-            onClick = {}
+            onClick = {
+
+            }
         ) {
 
             BaseTextComponent(modifier = modifier.padding(10.dp), text = context.getString(R.string.google))

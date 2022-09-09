@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.TextField
+import androidx.compose.material.TextFieldColors
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -16,9 +17,16 @@ import com.example.mvipractise.ui.theme.Colors
 @Composable
 fun EditTextComponent(
     modifier: Modifier,
-    hint: String,
+    hint: String = "",
     getValue: String,
     keyboardType: KeyboardType,
+    colors: TextFieldColors = TextFieldDefaults.textFieldColors(
+        backgroundColor = Colors.lightGray,
+        focusedIndicatorColor = Color.Transparent,
+        unfocusedIndicatorColor = Color.Transparent,
+        disabledIndicatorColor = Color.Transparent
+    ),
+    radius: Int = 5,
     setValue: (String) -> Unit,
 ) {
 
@@ -30,15 +38,10 @@ fun EditTextComponent(
         label = { BaseTextComponent(modifier, hint) },
         singleLine = true,
         maxLines = 1,
-        shape = RoundedCornerShape(5.dp),
+        shape = RoundedCornerShape(radius.dp),
         modifier = modifier.fillMaxWidth(),
         keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
-        colors = TextFieldDefaults.textFieldColors(
-            backgroundColor = Colors.lightGray,
-            focusedIndicatorColor = Color.Transparent,
-            unfocusedIndicatorColor = Color.Transparent,
-            disabledIndicatorColor = Color.Transparent
-         )
+        colors = colors
 
     )
 

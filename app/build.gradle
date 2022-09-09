@@ -126,6 +126,9 @@ dependencies {
     //splash screen
     implementation(Dependencies.SPLASH_SCREEN)
 
+    // country picker
+    implementation(Dependencies.COUNTRY_PICKER)
+
     // DataStore Preferences
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 }

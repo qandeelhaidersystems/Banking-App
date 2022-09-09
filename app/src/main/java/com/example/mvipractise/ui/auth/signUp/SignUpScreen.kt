@@ -4,16 +4,21 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Checkbox
 import androidx.compose.material.CheckboxDefaults
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mvipractise.R
 import com.example.mvipractise.ui.theme.Colors
+import com.example.mvipractise.ui.theme.fontFamily
+import com.example.mvipractise.util.Constants
 import com.example.mvipractise.util.component.*
 
 @Composable
@@ -24,6 +29,8 @@ fun SignUpScreen(
 
     val modifier = Modifier
     val context = LocalContext.current
+
+
 
     Column(
         modifier = modifier.padding(start = 30.dp, end = 30.dp)
@@ -112,8 +119,13 @@ fun SignUpScreen(
                 )
             )
 
-            BaseTextComponent(
-                text = context.getString(R.string.read_terms_of_privacy_policy),
+            Text(
+                text = Constants.termsOfPrivacyPolicy,
+                color = Colors.textBaseColor,
+                fontSize = 14.sp,
+                fontFamily = fontFamily,
+                fontWeight = FontWeight.Light,
+                textAlign = TextAlign.Center,
                 modifier = modifier.padding(start = 10.dp)
             )
 
@@ -127,28 +139,10 @@ fun SignUpScreen(
             enable = viewModel.isRegisterButtonEnabled.value
         )
 
+        AlreadyHaveLoginComponent(
+            modifier = modifier,
+            context = context)
 
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(bottom = 30.dp),
-            Alignment.BottomStart
-        ) {
-            Column {
-                BaseTextComponent(
-                    modifier = modifier,
-                    text = context.getString(R.string.already_have_an_account)
-                )
-
-                Spacer(modifier = modifier.padding(top = 5.dp))
-
-                BaseTextComponent(
-                    modifier = modifier,
-                    text = context.getString(R.string.login_cap)
-                )
-            }
-
-        }
     }
 
 }

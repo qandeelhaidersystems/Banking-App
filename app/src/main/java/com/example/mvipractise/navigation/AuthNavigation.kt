@@ -13,6 +13,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.mvipractise.ui.auth.login.ShowLoginScreen
 import com.example.mvipractise.ui.auth.signUp.SignUpScreen
+import com.example.mvipractise.ui.auth.signUp.SignUpScreen2
 import com.example.mvipractise.ui.home.screen.HomeScreen
 import com.example.mvipractise.ui.onBoarding.screens.OnBoardingScreen
 import com.example.mvipractise.ui.onBoarding.screens.WelcomeScreen
@@ -36,7 +37,7 @@ fun AuthNavigation() {
             ) {
 
                 composable(Screen.SignUpScreen.route) {
-                    SignUpScreen()
+                    SignUpScreen2()
                 }
 
 

@@ -13,8 +13,10 @@ class SignUpViewModel @Inject constructor() : ViewModel(){
     val email = mutableStateOf("")
     val password = mutableStateOf("")
     val confirmPassword = mutableStateOf("")
+    val phoneNumber = mutableStateOf("")
 
     val isTermsOfPrivacyPolicy = mutableStateOf(false)
     val isRegisterButtonEnabled = mutableStateOf(false)
+    val isRegisterButtonEnabledPhoneNumber = mutableStateOf(false)
 
 }

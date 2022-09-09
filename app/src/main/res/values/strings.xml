@@ -12,6 +12,8 @@
     <string name="read_terms_of_privacy_policy">I’ve read and agree to the terms of privacy policy</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="login">login</string>
-    <string name="login_cap">LOGIN</string>
+    <string name="login_cap">L O G I N</string>
+    <string name="enter_your_location">Enter your location</string>
+    <string name="enter_your_phone_number">Enter your Phone Number</string>
 
 </resources>
