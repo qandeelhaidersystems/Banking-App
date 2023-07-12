@@ -12,6 +12,11 @@ abstract class BaseFragment<V : ViewModel?> : Fragment() {
 
     private var mViewModel: V? = null
 
+
+
+
+
+
 //    abstract fun getBindingVariable(): Int
 
     abstract fun getViewModels(): V
