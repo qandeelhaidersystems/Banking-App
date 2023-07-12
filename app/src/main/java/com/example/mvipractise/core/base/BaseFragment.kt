@@ -9,6 +9,7 @@ abstract class BaseFragment<V : ViewModel?> : Fragment() {
 
     private var mRootView: View? = null
 
+
     private var mViewModel: V? = null
 
 //    abstract fun getBindingVariable(): Int
